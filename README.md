@@ -1,5 +1,5 @@
 
-Based on webpack2, support Ejs and Scss.
+Based on webpack2, support ejs and scss.
 
 ## Build
 ```sh
@@ -17,12 +17,13 @@ npm run prod
 ```
 
 ## Support ES6+ 
-1.Run 
+1. Run 
 ```sh
-npm i -D babel-core babel-preset-latest babel-preset-stage-2 babel-runtime babel-plugin-transform-runtime babel-loader
+npm i -D babel-core babel-preset-latest babel-preset-stage-2 babel-runtime
+npm i -D babel-plugin-transform-runtime babel-loader
 ``` 
 
-2.Create ```.babelrc```:
+2. Create ```.babelrc``` :
 ```
 {
   "presets": ["latest", "stage-2"],
@@ -30,11 +31,13 @@ npm i -D babel-core babel-preset-latest babel-preset-stage-2 babel-runtime babel
 }
 ```
 
-3.```webpack-config/base.js``` Add:
+3. Config ```webpack-config/base.js``` :
 ```
+...
 {
     test: /\.js$/,
     loader: 'babel-loader'
-},
+}
+...
 ```
 
